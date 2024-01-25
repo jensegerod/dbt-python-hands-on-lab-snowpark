@@ -3,7 +3,7 @@ import pandas as pd
 
 def model(dbt, session):
     # dbt configuration
-    dbt.config(packages=["pandas","numpy"])
+    dbt.config(packages=["pandas==1.5.3","numpy"])
 
     # get upstream data
     pit_stops_joined = dbt.ref("mrt_pit_stops").to_pandas()
