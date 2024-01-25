@@ -2,7 +2,7 @@ import pandas as pd
 
 def model(dbt, session):
     # dbt configuration
-    dbt.config(packages=["pandas"], tags="predict")
+    dbt.config(packages=["pandas==1.5.3"], tags="predict")
 
     # get upstream data
     encoding = dbt.ref("covariate_encoding").to_pandas()
